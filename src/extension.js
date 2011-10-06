@@ -22,8 +22,6 @@ function onHibernateActivate(item) {
 }
 
 function addItems() {
-    let item;
-
     item = new PopupMenu.PopupMenuItem(_("Hibernate"));
     item.connect('activate', Lang.bind(this, onHibernateActivate));
     this._upClient.connect('notify::can-hibernate', Lang.bind(this, updateHibernate, item));
